@@ -1,101 +1,135 @@
-
-/* General Reset & Base Styles */
 body {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: #f9f9fb;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Header */
-header {
-    background: linear-gradient(to right, #a0c4ff, #bdb2ff);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #a0c4ff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #a0c4ff, #bdb2ff);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 0 0 20px 20px;
+  animation: fadeIn 1s ease;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
 }
 
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+/* Blog Cards */
+main#posts {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
-
-/* Main Section */
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-/* Blog Post Card on Homepage */
 .post {
-    background: white;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
 }
-
 .post:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-
 .post a {
-    text-decoration: none;
-    color: #3a0ca3;
-    font-weight: 600;
-    font-size: 1.1rem;
+  text-decoration: none;
+  color: #3a0ca3;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-/* Individual Blog Page */
+/* Individual Article */
 article {
-    background: white;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 article h1 {
-    font-size: 2rem;
-    color: #3f37c9;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #3f37c9;
 }
-
 .post-content {
-    font-size: 1.05rem;
-    margin-top: 1rem;
+  margin-top: 1rem;
+  font-size: 1.05rem;
 }
-
-/* Back Home Link */
 a.home-link {
-    display: inline-block;
-    margin-top: 2rem;
-    color: #4361ee;
-    text-decoration: none;
-    font-weight: bold;
+  display: inline-block;
+  margin-top: 2rem;
+  color: #4361ee;
+  text-decoration: none;
+  font-weight: bold;
+}
+a.home-link:hover {
+  text-decoration: underline;
 }
 
-a.home-link:hover {
-    text-decoration: underline;
+/* Contact Page */
+.simple-header {
+  background: #bde0fe;
+  padding: 2rem;
+  text-align: center;
+}
+.contact-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-    color: #777;
+  background: #edf2fb;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
